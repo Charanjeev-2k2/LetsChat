@@ -1,0 +1,59 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+body{
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+}
+.main {
+    background-color: black;
+    border-left: 1px solid #3D3D42;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main__chat_header {
+    padding-top: 5px;
+    color: #F5F5F5;
+    text-align: center;
+    
+}
+
+.main__chat__window {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.messages{
+    color: black;
+    list-style: none;
+}
+
+.main__message_container {
+    padding: 22px 12px;
+    display: flex;
+}
+
+.main__message_container input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #F5F5F5;
+}
+
+
+
+.btn-primary{
+    color: #fff;
+    background-color: #0d6efd00;
+    border-color: #fefefe;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #19875400;
+    border-color: #ffffff;
+}
