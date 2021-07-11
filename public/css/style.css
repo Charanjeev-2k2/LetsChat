@@ -5,7 +5,7 @@ body{
 
 #video-grid{
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 5px;
 }
 
@@ -13,11 +13,16 @@ video{
     height: 300px;
     width: 400px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+    border-color: #005768;
+    margin: 2px;
+    
 }
 
 video:hover{
-    border-color: red;
+    border-color: rgb(0, 156, 104);
 }
 
 .main {
@@ -27,13 +32,13 @@ video:hover{
 }
 
 .main__left {
+    display: none;
     flex: 0.8;
-    display: flex;
     flex-direction: column;
 }
 
 .main__right {
-    flex: 0.2
+    flex: 1
 }
 
 .main__videos {
@@ -51,10 +56,10 @@ video:hover{
 }
 
 .main__control {
-    color: #D2D2D2;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
-    background-color:black;
+    background-color:#085c6d;
     padding: 5px;
 }
 
@@ -74,19 +79,21 @@ video:hover{
 }
 
 
-.main__control_button:hover {
-    background-color: #343434;
-    border-radius: 50px;
-}
+
 
 .main__control_button i{
     font-size: 22px;
 }
 
+.main__control_button:hover{
+    background-color: #dc354542;
+    border-radius: 5px;
+}
+
 .main__right {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #085c6d;
 }
 
 .main__chat_header {
@@ -116,11 +123,11 @@ video:hover{
     flex-grow: 1;
     background-color: transparent;
     border: none;
-    color: #F5F5F5;
+    color: #ffffff;
 }
 
 .leave_meeting {
-    color: #EB534B;
+    color: #ffc107
 }
 
 .unmute, .stop {
@@ -130,3 +137,34 @@ video:hover{
 h6{
     color: white;
 }
+
+.start_video_call{
+    display: flex;
+}
+
+.message{
+    padding: 5px;
+}
+
+
+button{
+    font-weight: 600;
+    margin-right: 0.2rem;
+    background: #085c6d;
+    color: #ffffff;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--bs-white);
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button:hover{
+    background-color: #dc354542;
+    border-radius: 5px;
+}
+::placeholder { 
+    color: #ffffffb3;
+    opacity: 1; 
+  }
+

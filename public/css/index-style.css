@@ -1,59 +1,63 @@
-html{
-    height: 100%;
-    margin: 0;
-}
 body{
-    height: 100%;
-    margin: 0;
-    padding: 5px;
+    background-image: url("/imgs/video-call-bg.jpg");
 }
-.main {
-    background-color: black;
-    border-left: 1px solid #3D3D42;
+
+
+.main__right
+{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: 50%;
     flex-direction: column;
-    height: 100%;
-}
-
-.main__chat_header {
-    padding-top: 5px;
-    color: #F5F5F5;
-    text-align: center;
-    
-}
-
-.main__chat__window {
-    flex-grow: 1;
-    overflow-y: auto;
-}
-
-.messages{
-    color: black;
-    list-style: none;
-}
-
-.main__message_container {
-    padding: 22px 12px;
-    display: flex;
-}
-
-.main__message_container input {
-    flex-grow: 1;
-    background-color: transparent;
-    border: none;
-    color: #F5F5F5;
 }
 
 
-
-.btn-primary{
-    color: #fff;
-    background-color: #0d6efd00;
-    border-color: #fefefe;
-}
-
-.btn-success {
-    color: #fff;
-    background-color: #19875400;
+#join-button {
+    font-size: 2rem;
+    padding: 8px 12px;
+    font-weight: 600;
+    background: #085c6d;
+    color: #ffffff;
+    border-radius: 8px;
+    border-style: solid;
     border-color: #ffffff;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+.input-one{
+    display:flex;
+}
+.input-one input {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+  }
+
+.start_chat{
+    font-size: 2rem;
+    padding: 8px 12px;
+    font-weight: 600;
+    background: #085c6d;
+    color: #ffffff;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #ffffff;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.create-room {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+.create-room:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.my_nav{
+    color:black;
 }

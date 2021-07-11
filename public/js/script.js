@@ -17,16 +17,23 @@ navigator.mediaDevices.getUserMedia({
   audio: true
 }).then((stream) => {
 
+  
   myVideoStream = stream;
+
+  document.getElementById("muteButton").click();
+  document.getElementById("playPauseVideo").click();
   addVideoStream(myVideo, stream)
 
 //On peer call, create a video element
   myPeer.on('call', (call) => {
     call.answer(stream);
+
     const video = document.createElement('video');
     call.on('stream', (userVideoStream) => {
       //on stream add user video stream
       addVideoStream(video, userVideoStream);
+
+      
     });
   });
 
@@ -48,15 +55,18 @@ socket.on('user-disconnected', (userId) => {
   console.log('User disconnected ' + userId);
 });
 
+
 myPeer.on('open', (id) => {
   socket.emit('join-room', ROOM_ID, id);
 })
 
+let userVideoStream;
 function connectToNewUser(userId, stream) {
   const call = myPeer.call(userId, stream);
   const video = document.createElement('video');
   call.on('stream', (userVideoStream) => {
     addVideoStream(video, userVideoStream);
+
   });
   call.on('close', () => {
     video.remove();
@@ -74,7 +84,6 @@ function addVideoStream(video, stream) {
 }
 
 
-
 //Invite people
 
 document.getElementById("invite-button").addEventListener("click", getURL);
@@ -82,7 +91,7 @@ document.getElementById("invite-button").addEventListener("click", getURL);
 function getURL() {
   const c_url = window.location.href;
   copyToClipboard(c_url);
-  alert("Url Copied to Clipboard,\nShare it with your Friends!\nUrl: " + c_url);
+  alert("Url Copied to Clipboard,\nPaste the URL in the browser search bar and chat with your friends!\nUrl: " + c_url);
 }
 
 function copyToClipboard(text) {
@@ -93,6 +102,9 @@ function copyToClipboard(text) {
   document.execCommand("copy");
   document.body.removeChild(dummy);
 }
+
+
+
 
 //Mute and Unmute functionality
 const muteUnmute = () => {
@@ -189,11 +201,15 @@ socket.on('create_message', message => {
 document.getElementById("leave_button").addEventListener("click", endCall);
 
 function endCall() {
-  document.querySelector('.main__left').remove();
+  //document.querySelector('.main__left').remove();
   document.querySelector('.main__right').style.cssText = "flex: 1;"; 
+  document.querySelector('.main__left').style.display = "none"; 
+  document.querySelector('.start_video_call').style.display = "flex"; 
   document.getElementById('all_messages').innerHTML = local_chat_storage;
   myVideoStream.getVideoTracks()[0].enabled = false;
   myVideoStream.getAudioTracks()[0].enabled = false;
+
+  
   
   
   //window.location.href = `/`;
@@ -201,4 +217,21 @@ function endCall() {
 }
 
 ///////////////
+
+
+function StartVideoCall(){
+  document.querySelector('.main__left').style.display = "flex";
+  document.querySelector('.main__right').style.cssText = "flex: 0.2;";  
+  document.querySelector('.start_video_call').style.display = "none"; 
+  document.querySelector('.chat_invite_button').style.display = "none";
+
+  document.getElementById("muteButton").click();
+  document.getElementById("playPauseVideo").click();
+
+  
+}
+
+/////////////////
+
+
 

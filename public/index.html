@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon"
-    href="https://img-premium.flaticon.com/png/128/2839/premium/2839026.png?token=exp=1625066976~hmac=f424401597f7050378dfca97f8acc915"/>
+    <link rel="icon" type="image/svg+xml" href="/imgs/icon.svg">
+    <link rel="alternate icon" href="/imgs/icon.svg">
+    <link rel="mask-icon" href="/imgs/icon.svg" color="#ff8a01">
+
+    <link rel="stylesheet" href="/css/index-style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c939d0e917.js" defer></script>
+    <script src="/js/index-script.js" defer></script>
     <title>Let's Chat</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light my_nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/imgs/icon.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Let's Chat
+          </a>
+        </div>
+      </nav>
+    <div class="main">
+        <div class = "main__right">
+            <div class = "start_call">
+                <button class="start_chat">
+                    <a class = "create-room" href = "/create-room/" >Start Chat</a>
+                    <i class="far fa-comment-alt"></i>
+                </button>
+            </div>
+            <div class="input-one">
+                <input
+                  id="invite-link-input"
+                  type="text"
+                  placeholder="Enter Invite Link"
+                />
+                <button id="join-button" onclick="getInputValue()">Join</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 </body>
 </html>
