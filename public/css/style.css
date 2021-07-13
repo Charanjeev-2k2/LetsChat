@@ -38,7 +38,10 @@ video:hover{
 }
 
 .main__right {
-    flex: 1
+    display: flex;
+    flex-direction: column;
+    background-color: #085c6d;
+    flex: 1;
 }
 
 .main__videos {
@@ -50,10 +53,6 @@ video:hover{
     padding: 40px;
 }
 
-.main__right {
-    background-color:#ffffff;
-    border-left: 1px solid #3D3D42;
-}
 
 .main__control {
     color: #ffffff;
@@ -78,9 +77,6 @@ video:hover{
     cursor: pointer;
 }
 
-
-
-
 .main__control_button i{
     font-size: 22px;
 }
@@ -88,12 +84,6 @@ video:hover{
 .main__control_button:hover{
     background-color: #dc354542;
     border-radius: 5px;
-}
-
-.main__right {
-    display: flex;
-    flex-direction: column;
-    background-color: #085c6d;
 }
 
 .main__chat_header {
@@ -145,7 +135,6 @@ h6{
 .message{
     padding: 5px;
 }
-
 
 button{
     font-weight: 600;
