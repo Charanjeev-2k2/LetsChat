@@ -85,8 +85,6 @@ function addVideoStream(video, stream) {
 
 
 //Invite people functionality
-document.getElementById("invite-button").addEventListener("click", getURL);
-
 function getURL() {
   const c_url = window.location.href;
   copyToClipboard(c_url);
@@ -186,9 +184,6 @@ socket.on('create_message', message => {
 })
 
 //Leave Meeting functionality
-
-document.getElementById("leave_button").addEventListener("click", endCall);
-
 function endCall() {
   document.querySelector('.main__right').style.cssText = "flex: 1;";
   document.querySelector('.main__left').style.display = "none";
@@ -213,7 +208,6 @@ function StartVideoCall() {
 }
 
 //Send claps feature
-document.getElementById('send-claps').addEventListener('click', SendClaps)
 
 function SendClaps() {
   socket.emit("send_msg", "👏")

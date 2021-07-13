@@ -54,21 +54,21 @@
 
         
         <div class="main__control_block">
-          <div class="main__control_button" id="send-claps">
+          <div class="main__control_button" id="send-claps" onclick="SendClaps()">
             
             <span>Send Claps</span>
           </div>
 
 
 
-          <div class="main__control_button" id="invite-button">
+          <div class="main__control_button" id="invite-button" onclick = "getURL()">
             <i class="fa fa-user-plus"></i>
             <span>Invite people</span>
           </div>
 
           <div class="main__control_button">
           <!--options other than mute and pause video-->
-            <span class = "leave_meeting" id = "leave_button">Leave Meeting</span>
+            <span class = "leave_meeting" id = "leave_button" onclick = "endCall()">Leave Meeting</span>
           </div>
 
           
