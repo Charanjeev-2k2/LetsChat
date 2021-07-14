@@ -22,5 +22,5 @@ socket.io
 EJS
 
 ## Prerequisites
-Allow the camera and audio permissions asked by the browser
-\nStart video call simultaneously for all users
+- Allow the camera and audio permissions asked by the browser
+- Start video call simultaneously for all users
