@@ -3,8 +3,9 @@
 Let's Chat is multi-user multi-room video and text chatting website
 
 ## Features
-- Begin chatting before call and continue it during and after the call
+- Begin text chatting before call and continue it during and after the call
 - Invite others to the chat
+- Video call multiple participants
 - Toggle audio and video streams
 - Send reactions during call
 - Enjoy a friendly UI 
