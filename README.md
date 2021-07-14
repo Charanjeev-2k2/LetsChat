@@ -23,4 +23,4 @@ EJS
 
 ## Prerequisites
 Allow the camera and audio permissions asked by the browser
-Start video call simultaneously for all users
+\nStart video call simultaneously for all users
