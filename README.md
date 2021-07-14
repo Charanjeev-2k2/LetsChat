@@ -15,10 +15,10 @@ https://chat-lets.herokuapp.com/
 Start your own room or enter link shared by your friends
 
 ## Developed using
-Express JS 
-WebRTC
-PEERJS
-socket.io
+Express JS   
+WebRTC  
+PEERJS  
+socket.io  
 EJS
 
 ## Prerequisites
