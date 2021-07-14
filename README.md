@@ -2,6 +2,10 @@
 
 Let's Chat is multi-user multi-room video and text chatting website
 
+## Demo
+https://chat-lets.herokuapp.com/  
+Start your own room or enter link shared by your friends
+
 ## Features
 - Begin text chatting before call and continue it during and after the call
 - Invite others to the chat
@@ -9,10 +13,6 @@ Let's Chat is multi-user multi-room video and text chatting website
 - Toggle audio and video streams
 - Send reactions during call
 - Enjoy a friendly UI 
-
-## Demo
-https://chat-lets.herokuapp.com/
-Start your own room or enter link shared by your friends
 
 ## Developed using
 Express JS   
